@@ -8,3 +8,13 @@ C:\Users\Asim\Desktop\ASE\graphical-programming-language\graphical-programming-l
 C:\Users\Asim\Desktop\ASE\graphical-programming-language\graphical-programming-language\obj\Debug\graphical-programming-language.exe
 C:\Users\Asim\Desktop\ASE\graphical-programming-language\graphical-programming-language\obj\Debug\graphical-programming-language.pdb
 C:\Users\Asim\Desktop\ASE\graphical-programming-language\graphical-programming-language\obj\Debug\graphical_programming_language.Form1.resources
+C:\Users\PC\Desktop\ASE\graphical-programming-language\bin\Debug\graphical-programming-language.exe.config
+C:\Users\PC\Desktop\ASE\graphical-programming-language\bin\Debug\graphical-programming-language.exe
+C:\Users\PC\Desktop\ASE\graphical-programming-language\bin\Debug\graphical-programming-language.pdb
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical-programming-language.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical_programming_language.Form1.resources
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical_programming_language.Properties.Resources.resources
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical-programming-language.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical-programming-language.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical-programming-language.exe
+C:\Users\PC\Desktop\ASE\graphical-programming-language\obj\Debug\graphical-programming-language.pdb
