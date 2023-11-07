@@ -46,10 +46,25 @@ namespace graphical_programming_language
         {
 
         }
-
-        private void button5_Click(object sender, EventArgs e)
+        /*
+         * this function is to save the multi command code into text file in your local system.
+         * we can use the same code next time using open button.
+         */
+        private void btnSave_Click(object sender, EventArgs e)
         {
-
+            var saveFileDialog = new SaveFileDialog();
+            //this will add file to .txt extension to save code in plain text
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|RTF Files (*.rtf)|*.rtf";
+            saveFileDialog.AddExtension = true;
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                var extension = System.IO.Path.GetExtension(saveFileDialog.FileName);
+                //condition to check the above code create .txt file and work accordingly..
+                if (extension.ToLower() == ".txt")
+                    multiLineInput.SaveFile(saveFileDialog.FileName, RichTextBoxStreamType.PlainText);
+                else
+                    multiLineInput.SaveFile(saveFileDialog.FileName, RichTextBoxStreamType.RichText);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
