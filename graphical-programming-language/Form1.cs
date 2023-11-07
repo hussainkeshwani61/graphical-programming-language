@@ -61,5 +61,16 @@ namespace graphical_programming_language
         {
 
         }
+        //this function is to open saved command in multiLine Command input by the user
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opentext = new OpenFileDialog();
+            if (opentext.ShowDialog() == DialogResult.OK)
+            {
+                //variable is created inside if condition. Hence, this variable is valid for this condition only.
+                string selectedFileName = opentext.FileName;
+                multiLineInput.LoadFile(selectedFileName, RichTextBoxStreamType.PlainText); //this will load text file command to multi line command box..
+            }
+        }
     }
 }
