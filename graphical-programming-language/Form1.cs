@@ -56,5 +56,10 @@ namespace graphical_programming_language
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
