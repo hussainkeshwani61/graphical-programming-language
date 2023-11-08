@@ -15,9 +15,12 @@ namespace graphical_programming_language
     {
         //giving GPL_shapes class as g.
         GPL_Shapes g;
+
+        //form construct function
         public Form1()
         {
             InitializeComponent();
+            g = new GPL_Shapes();//create object of GPL_shapes class
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,7 +79,6 @@ namespace graphical_programming_language
             //condtion if the input user command is null or empty.
             if(!inputFlag)
             {
-                MessageBox.Show("Please enter any command!.", "Error");
                 oneLineInput.Focus();
             }
 
