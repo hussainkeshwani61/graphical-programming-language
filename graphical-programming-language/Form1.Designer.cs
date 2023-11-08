@@ -104,7 +104,7 @@
             this.btnRun.TabIndex = 17;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.button1_Click);
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnOpen
             // 
