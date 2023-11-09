@@ -9,6 +9,14 @@ namespace graphical_programming_language
 {
     internal class GPL_Shapes_Draw
     {
-   
+        Graphics g;
+
+        public void PrintMessage(string message)
+        {
+            using (Font myFont = new Font("Arial", 8))
+            {
+                g.DrawString(message, myFont, Brushes.Black, new Point(5, 5));
+            }
+        }
     }
 }

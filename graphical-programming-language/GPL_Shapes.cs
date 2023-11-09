@@ -15,34 +15,42 @@ namespace graphical_programming_language
             //int cmdX = 0, cmdY = 0, cmdz = 0;
             string errorMessage = string.Empty;
 
-            //storing all inputCommand in array and converting into single line commands using for loop (we can use different loop as per our requirment..)
+            //storing all inputCommand in array and converting string into lowerCase using for loop (we can use different loop as per our requirment.)
+            //in other words, string is converted into commands..
             string[] arrCommand = inputCommand.ToLower().Split(new string[] { ";" }, StringSplitOptions.None);
-            string[] arg1;
+            string[] firstArrCommand;
 
             for(int i = 0; i < arrCommand.Count(); i++)
             {
-                /*
-                 * /hear the whole main runCommand for single line and multiple line goes
-                 *  and error message change as per condition and pass to PrintMessage function to pring messge
-                 */
 
-                //remove empty space from string.
-                arg1 = arrCommand[i].Trim().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (arrCommand[i].Trim().ToString() != string.Empty)
+                {
+                    //remove extra space from the code
+                    firstArrCommand = arrCommand[i].Trim().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (arg1.Count() == 1)
-                {
-                    //program for single line start hear
-                } 
-                else
-                {
-                    //program for multiple line start hear
+                    for (int j = 0; j < firstArrCommand.Count(); j++)
+                    {
+                        // every run commands goes hear
+                        if (firstArrCommand[j].Trim().ToString() != string.Empty)
+                        {
+                            //this is tempory message 
+                            errorMessage = errorMessage + "Command enter successfully" + (i + 1).ToString(); 
+                        } else
+                        {
+                            errorMessage = errorMessage + "Please, Enter a Valid Command!" + (i + 1).ToString();
+                            
+                        }
+                    }
                 }
             }
 
-            //errorMessage was empty at first, but after passing from forLoop it has its message..
+            /**
+             * errorMessage value gets from above for loop 
+             */
             if (errorMessage.Trim() != string.Empty)
             {
-                //PrintMessage(inputCommand);
+                // *** this function is not done yet 
+                PrintMessage(errorMessage);
             }
 
         }

@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="GPL_Shapes.cs" />
     <Compile Include="GPL_Shapes_Draw.cs" />
-    <Compile Include="GPL_Shapes_Properties.cs" />
+    <Compile Include="GPL_Shap_properties.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
