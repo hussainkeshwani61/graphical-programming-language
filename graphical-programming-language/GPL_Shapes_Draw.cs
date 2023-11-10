@@ -11,6 +11,8 @@ namespace graphical_programming_language
     {
         Graphics g;
 
+
+        //this function will print every error message or the Graphical programming language application..
         public void PrintMessage(string message)
         {
             using (Font myFont = new Font("Arial", 8))

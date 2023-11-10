@@ -44,7 +44,7 @@
             // 
             // outputBox
             // 
-            this.outputBox.BackColor = System.Drawing.Color.IndianRed;
+            this.outputBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.outputBox.Location = new System.Drawing.Point(12, 38);
             this.outputBox.Name = "outputBox";
             this.outputBox.Size = new System.Drawing.Size(517, 424);

@@ -16,6 +16,12 @@ namespace graphical_programming_language
             Refresh();
         }
 
+        //this function use refresh the outputBox.Image refresh..
+        public override void Refresh()
+        {
+            outputBox.Image = GPL_Shap_properties.NewPicture;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +52,35 @@ namespace graphical_programming_language
          */
         private void btnRun_Click(object sender, EventArgs e)
         {
-            
+            Boolean inputFlag = false;
+            //condition to check if inputCommands are multi line command or not.
+            if (multiLineInput.Text.Trim() != string.Empty)
+            {
+                inputFlag = true;
+                //passing data to runCommand function 
+                g.runCommand(multiLineInput.Text.Trim());
+                multiLineInput.Focus();
+                //once commands is pass to runCommand function MultiLine Input textbox will be empty..
+                multiLineInput.Text = string.Empty;
+            }
+
+            //condition to check if InputCommands is single Line or Not?.
+            if (oneLineInput.Text.Trim() != string.Empty)
+            {
+                inputFlag = true;
+                //passing data to runCommand function 
+                g.runCommand(oneLineInput.Text.Trim());
+                oneLineInput.Focus();
+                //once commands is pass to runCommand function SingleLine Input textbox will be empty..
+                oneLineInput.Text = string.Empty;
+            }
+
+            //condtion if the input user command is null or empty.
+            if (!inputFlag)
+            {
+                g.PrintMessage("Please enter any command!");
+                oneLineInput.Focus();
+            }
 
         }
 
@@ -88,7 +122,8 @@ namespace graphical_programming_language
             {
                 //variable is created inside if condition. Hence, this variable is valid for this condition only.
                 string selectedFileName = opentext.FileName;
-                multiLineInput.LoadFile(selectedFileName, RichTextBoxStreamType.PlainText); //this will load text file command to multi line command box..
+                //this will load text file command to multi line command box.
+                multiLineInput.LoadFile(selectedFileName, RichTextBoxStreamType.PlainText); 
             }
         }
 

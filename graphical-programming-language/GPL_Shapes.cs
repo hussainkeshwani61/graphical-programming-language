@@ -8,6 +8,7 @@ namespace graphical_programming_language
 {
     internal class GPL_Shapes : GPL_Shapes_Draw
     {
+
         //get input from user when run button clicked!.
         public void runCommand(string inputCommand)
         {
@@ -16,7 +17,8 @@ namespace graphical_programming_language
             string errorMessage = string.Empty;
 
             //storing all inputCommand in array and converting string into lowerCase using for loop (we can use different loop as per our requirment.)
-            //in other words, string is converted into commands..
+            //in other words, string is converted into commands.
+           .
             string[] arrCommand = inputCommand.ToLower().Split(new string[] { ";" }, StringSplitOptions.None);
             string[] firstArrCommand;
 
@@ -33,8 +35,7 @@ namespace graphical_programming_language
                         // every run commands goes hear
                         if (firstArrCommand[j].Trim().ToString() != string.Empty)
                         {
-                            //this is tempory message 
-                            errorMessage = errorMessage + "Command enter successfully" + (i + 1).ToString(); 
+
                         } else
                         {
                             errorMessage = errorMessage + "Please, Enter a Valid Command!" + (i + 1).ToString();
