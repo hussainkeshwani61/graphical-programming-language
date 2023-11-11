@@ -14,6 +14,7 @@ namespace graphical_programming_language
         {
             //seting up all axis at zero and strings at empty at initial face..
             int cmdX = 0, cmdY = 0;
+            int cmdz = 0;
             string errorMessage = string.Empty;
             Boolean runFlag = true;
             //storing all inputCommand in array and converting string into lowerCase using for loop (we can use different loop as per our requirment.)
@@ -158,6 +159,57 @@ namespace graphical_programming_language
                         }
                         //square end
 
+                        //tringle start
+                        else if (firstArrCommand[j].ToString().Trim().Equals("triangle"))
+                        {
+                            //check if the both value enter where, firstvalue = "square", other three are numbers.
+                            if (firstArrCommand.Count() != 4)
+                            {
+                                errorMessage = errorMessage + "Command no " + (i + 1).ToString() + " is invalid!\n";
+                                runFlag = false;
+                                break;
+                            }
+                            else
+                            {   //condition to check first parameter is number or not.
+                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    //condtion to check second parameter is number or not
+                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    {
+                                        //condition to check thrid number is parameter or not
+                                        if (checkNumber(firstArrCommand[j + 3].Trim(), ref cmdz))
+                                        {
+                                            if (runFlag)
+                                            {
+                                                //pass all three parameter to draw tringle
+                                                DrawTriangle(cmdX, cmdY, cmdz);
+                                            }
+                                        }
+                                        else
+                                        {
+                                            //error message, if third parameter is invalid
+                                            errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                            runFlag = false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //error message, if second parameter is 
+                                        errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                        runFlag = false;
+                                    }
+                                }
+                                else
+                                {
+                                    //error message if first parameter is invalid
+                                    errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                    runFlag = false;
+                                }
+                                j = j + 3;
+                            }
+                        }
+                        //tringle end
+                        
                         else
                         {
                             //error message display not enter a valid command

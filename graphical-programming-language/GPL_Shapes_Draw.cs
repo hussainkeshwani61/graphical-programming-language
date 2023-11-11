@@ -67,6 +67,36 @@ namespace graphical_programming_language
             }
         }
 
+        //function to draw tringle with three parameter 
+        public void DrawTriangle(int xpos, int ypos, int zpos)
+        {
+            
+            try
+            {
+                int tx, ty, cx, cy;
+                cx = Convert.ToInt32(x - (xpos / 3));
+                cy = Convert.ToInt32(y - (ypos / 3));
+                tx = Convert.ToInt32(cx + xpos);
+                ty = Convert.ToInt32(cy + ypos);
+                
+                
+                Point[] points = new Point[3];
+                points[0] = new Point(cx, cy);
+                points[1] = new Point(tx, cy);
+                points[2] = new Point(cx, ty);
+
+                if (GPL_Shap_properties.isFill)
+                    this.g.FillPolygon(GPL_Shap_properties.FillColor, points);
+                    this.g.DrawPolygon(p, points);
+                    GPL_Shap_properties.isUnitTestValid = true;
+            }
+            catch (Exception ex)
+            {
+                PrintMessage(ex.Message);
+                GPL_Shap_properties.isUnitTestValid = false;
+            }
+        }
+
 
         //function to MovePoint from point A to Point B based on two parameters
         public void MovePoint(int xpos, int ypos)
