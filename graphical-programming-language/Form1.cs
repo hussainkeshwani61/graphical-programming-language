@@ -140,5 +140,14 @@ namespace graphical_programming_language
             g.CurrPoint(true);
             Refresh();
         }
+
+        //button to reset whole process and clear the screen
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            GPL_Shap_properties.NewPicture = new Bitmap(640, 480);
+            g = new GPL_Shapes();
+            g.CurrPoint(false);
+            Refresh();
+        }
     }
 }
