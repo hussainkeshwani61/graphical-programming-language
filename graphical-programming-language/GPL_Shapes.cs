@@ -209,7 +209,49 @@ namespace graphical_programming_language
                             }
                         }
                         //tringle end
-                        
+
+                        //drawto start
+                        else if (firstArrCommand[j].ToString().Trim().Equals("drawto"))
+                        {
+                            //check if the both value enter where, firstvalue = "drawto", other two are numbers.
+                            if (firstArrCommand.Count() != 3)
+                            {
+                                errorMessage = errorMessage + "Command no " + i.ToString() + " is invalid!\n";
+                                runFlag = false;
+                                break;
+                            }
+                            else
+                            {
+                                //condition to check first parameter is number or not.
+                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    //condition to check second parameter is number or not.
+                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    {
+                                        if (runFlag)
+                                        {
+                                            //pass all three parameter to drawLine
+                                            DrawLine(cmdX, cmdY);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        //error message, if second parameter is invalid
+                                        errorMessage = errorMessage + " Invalid number at command no " + i.ToString() + "!\n";
+                                        runFlag = false;
+                                    }
+                                }
+                                else
+                                {
+                                    //error message, if first parameter is invalid
+                                    errorMessage = errorMessage + " Invalid number at command no " + i.ToString() + "!\n";
+                                    runFlag = false;
+                                }
+                                j = j + 2;
+                            }
+                        }
+                        //drawto end
+
                         else
                         {
                             //error message display not enter a valid command

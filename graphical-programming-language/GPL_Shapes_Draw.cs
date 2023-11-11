@@ -32,6 +32,7 @@ namespace graphical_programming_language
         {
             try
             {
+                
                 int xpos = x - (width / 2);
                 int ypos = y - (width / 2);
                 CurrShape = new Rectangle(xpos, ypos, width, width);
@@ -73,13 +74,14 @@ namespace graphical_programming_language
             
             try
             {
+                //knowing points of x y z
                 int tx, ty, cx, cy;
                 cx = Convert.ToInt32(x - (xpos / 3));
                 cy = Convert.ToInt32(y - (ypos / 3));
                 tx = Convert.ToInt32(cx + xpos);
                 ty = Convert.ToInt32(cy + ypos);
                 
-                
+                //drawing tringle at x y and z
                 Point[] points = new Point[3];
                 points[0] = new Point(cx, cy);
                 points[1] = new Point(tx, cy);
@@ -95,6 +97,34 @@ namespace graphical_programming_language
                 PrintMessage(ex.Message);
                 GPL_Shap_properties.isUnitTestValid = false;
             }
+        }
+
+        public void DrawLine(int xpos, int ypos)
+        {
+            try
+            {
+                //check line have color or not
+                if (GPL_Shap_properties .isFill)
+                {
+                    //Re initialize pen with new color and draw line 
+                    p = new Pen(GPL_Shap_properties.penColor, 1);
+                    this.g.DrawLine(p, x, y, xpos, ypos);
+                }
+                else
+                    //Draw black line
+                    this.g.DrawLine(p, x, y, xpos, ypos);
+                //Set pen color default as black
+                p = new Pen(Color.Black, 1);
+                //Set value if function run successfully for unit testing
+                GPL_Shap_properties.isUnitTestValid = true;
+            }
+            catch (Exception ex)
+            {
+                //print message if any run time error occure
+                PrintMessage(ex.Message);
+                GPL_Shap_properties.isUnitTestValid = false;
+            }
+
         }
 
 
