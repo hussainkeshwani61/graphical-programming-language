@@ -252,6 +252,35 @@ namespace graphical_programming_language
                         }
                         //drawto end
 
+                        //circle start
+                        else if (firstArrCommand[j].ToString().Trim().Equals("circle"))
+                        {
+                            if (firstArrCommand.Count() != 2)
+                            {
+                                errorMessage = errorMessage + "invalid number of parameters for circle " + (i + 1).ToString() + "\n";
+                                runFlag = false;
+                                break;
+                            }
+                            else
+                            {
+                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    if (runFlag)
+                                    {
+                                        DrawCircle(cmdX);
+                                    }
+                                }
+                                else
+                                {
+                                    errorMessage = errorMessage + " Non numeric parameter " + (i + 1).ToString() + "\n";
+                                    runFlag = false;
+                                }
+                                j = j + 1;
+                            }
+                        }
+
+                        //circle end
+
                         else
                         {
                             //error message display not enter a valid command
