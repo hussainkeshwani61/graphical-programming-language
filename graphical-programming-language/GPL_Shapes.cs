@@ -33,7 +33,7 @@ namespace graphical_programming_language
                     {
                         // every run commands goes hear
 
-                        //moveto command 
+                        //moveto start 
                         if (firstArrCommand[j].ToString().Trim().Equals("moveto"))
                         {
                             //check if the three value enter where, firstvalue = "moveto" 2nd and 3rd value are numbers
@@ -77,14 +77,15 @@ namespace graphical_programming_language
                                 j = j + 2;
                             }
                         }
+                        //moveto end
 
-                        //rect command
+                        //rect start
                         else if (firstArrCommand[j].ToString().Trim().Equals("rect"))
                         {
                             //check if the three value enter where, firstvalue = "rect", 2nd and 3rd value are numbers.
                             if (firstArrCommand.Count() != 3)
                             {
-                                //error messgae and break the loop
+                                //error messgae if condition fail and will break the loop and change boolean value of runflage
                                 errorMessage= errorMessage+ "Invalid no of argument at command " + (i + 1).ToString() + "!\n";
                                 runFlag = false;
                                 break;
@@ -122,6 +123,41 @@ namespace graphical_programming_language
                                 j = j + 2;
                             }
                         }
+                        //rect end
+
+                        //square start
+                        else if (firstArrCommand[j].ToString().Trim().Equals("square"))
+                        {
+                            //check if the both value enter where, firstvalue = "square", 2nd is numbers.
+                            if (firstArrCommand.Count() != 2)
+                            {
+                                //error messgae if condition fail and will break the loop and change boolean value of runflage
+                                errorMessage = errorMessage + "Command no " + (i + 1).ToString() + " is invalid!\n";
+                                runFlag = false;
+                                break;
+                            }
+                            else
+                            {
+                                //check the parameter value is number or not.
+                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    //if it pass the condition than parameter value pass to square function
+                                    if (runFlag)
+                                    {
+                                        DrawSquare(cmdX);
+                                    }
+                                }
+                                else
+                                {
+                                    //height parameter is not number than this error message will display
+                                    errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                    runFlag = false;
+                                }
+                                j = j + 1;
+                            }
+                        }
+                        //square end
+
                         else
                         {
                             //error message display not enter a valid command

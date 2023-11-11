@@ -27,6 +27,27 @@ namespace graphical_programming_language
             y = GPL_Shap_properties.y;
         }
 
+        //function to DrawSquare same as rectangle
+        public void DrawSquare(int width)
+        {
+            try
+            {
+                int xpos = x - (width / 2);
+                int ypos = y - (width / 2);
+                CurrShape = new Rectangle(xpos, ypos, width, width);
+                if (GPL_Shap_properties.isFill)
+                    this.g.FillRectangle(GPL_Shap_properties.FillColor, CurrShape);
+                this.g.DrawRectangle(p, CurrShape);
+                GPL_Shap_properties.isUnitTestValid = true;
+            }
+            catch (Exception ex)
+            {
+                PrintMessage(ex.Message);
+                GPL_Shap_properties.isUnitTestValid = false;
+            }
+        }
+
+
         //function to MovePoint from point A to Point B based on two parameters
         public void MovePoint(int xpos, int ypos)
         {
