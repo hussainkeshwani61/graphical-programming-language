@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace graphical_programming_language
@@ -131,9 +132,13 @@ namespace graphical_programming_language
             }
         }
 
+        //button to clear screen without resetting the picture box
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            GPL_Shap_properties.NewPicture = new Bitmap(640, 480);
+            g = new GPL_Shapes();
+            g.CurrPoint(true);
+            Refresh();
         }
     }
 }

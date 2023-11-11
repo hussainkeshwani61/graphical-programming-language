@@ -27,6 +27,26 @@ namespace graphical_programming_language
             y = GPL_Shap_properties.y;
         }
 
+        //function to drawcircle
+        public void DrawCircle(int width)
+        {
+            try
+            {
+                int xpos = x - (width / 2);
+                int ypos = y - (width / 2);
+                CurrShape = new Rectangle(xpos, ypos, width, width);
+                if (GPL_Shap_properties.isFill)
+                    this.g.FillEllipse(GPL_Shap_properties.FillColor, CurrShape);
+                this.g.DrawEllipse(p, xpos, ypos, width, width);
+                GPL_Shap_properties.isUnitTestValid = true;
+            }
+            catch (Exception ex)
+            {
+                PrintMessage(ex.Message);
+                GPL_Shap_properties.isUnitTestValid = false;
+            }
+        }
+
         //function to DrawSquare same as rectangle
         public void DrawSquare(int width)
         {
