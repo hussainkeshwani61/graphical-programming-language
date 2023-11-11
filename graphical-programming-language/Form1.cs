@@ -12,7 +12,9 @@ namespace graphical_programming_language
         public Form1()
         {
             InitializeComponent();
+            GPL_Shap_properties.x = GPL_Shap_properties.y = 0;
             g = new GPL_Shapes();//create object of GPL_shapes class
+            g.CurrPoint(false);
             Refresh();
         }
 
@@ -81,6 +83,8 @@ namespace graphical_programming_language
                 g.PrintMessage("Please enter any command!");
                 oneLineInput.Focus();
             }
+            Refresh();
+            GPL_Shap_properties.isFill = false;
 
         }
 
