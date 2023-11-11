@@ -12,8 +12,11 @@ namespace graphical_programming_language
         public Form1()
         {
             InitializeComponent();
+            GPL_Shap_properties.x = GPL_Shap_properties.y = 0;
             g = new GPL_Shapes();//create object of GPL_shapes class
+            g.CurrPoint(false);
             Refresh();
+
         }
 
         //this function use refresh the outputBox.Image refresh..
@@ -81,7 +84,8 @@ namespace graphical_programming_language
                 g.PrintMessage("Please enter any command!");
                 oneLineInput.Focus();
             }
-
+            Refresh();
+            GPL_Shap_properties.isFill = false;
         }
 
         /*
@@ -114,6 +118,7 @@ namespace graphical_programming_language
         {
 
         }
+      
         //this function is to open saved command in multiLine Command input by the user
         private void btnOpen_Click(object sender, EventArgs e)
         {

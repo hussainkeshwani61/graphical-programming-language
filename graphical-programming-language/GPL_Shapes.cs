@@ -13,12 +13,11 @@ namespace graphical_programming_language
         public void runCommand(string inputCommand)
         {
             //seting up all axis at zero and strings at empty at initial face..
-            //int cmdX = 0, cmdY = 0, cmdz = 0;
+            int cmdX = 0, cmdY = 0, cmdz = 0;
             string errorMessage = string.Empty;
-
+            Boolean inputFlag = true;
             //storing all inputCommand in array and converting string into lowerCase using for loop (we can use different loop as per our requirment.)
             //in other words, string is converted into commands.
-           .
             string[] arrCommand = inputCommand.ToLower().Split(new string[] { ";" }, StringSplitOptions.None);
             string[] firstArrCommand;
 
@@ -33,10 +32,41 @@ namespace graphical_programming_language
                     for (int j = 0; j < firstArrCommand.Count(); j++)
                     {
                         // every run commands goes hear
-                        if (firstArrCommand[j].Trim().ToString() != string.Empty)
+                        if (firstArrCommand[j].ToString().Trim().Equals("moveto"))
                         {
+                            if (firstArrCommand.Count() != 3)
+                            {
+                                errorMessage = errorMessage + "Command no. " + (i + 1).ToString() + " is invalid!\n";
+                                inputFlag = false;
+                                break;
+                            }
+                            else
+                            {
+                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                {
+                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    {
+                                        if (inputFlag)
+                                        {
+                                            MovePoint(cmdX, cmdY);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                        inputFlag = false;
+                                    }
+                                }
+                                else
+                                {
+                                    errorMessage = errorMessage + " Invalid number at command no " + (i + 1).ToString() + "!\n";
+                                    inputFlag = false;
+                                }
+                                j = j + 2;
+                            }
+                        }
 
-                        } else
+                        else
                         {
                             errorMessage = errorMessage + "Please, Enter a Valid Command!" + (i + 1).ToString();
                             
@@ -56,6 +86,14 @@ namespace graphical_programming_language
 
         }
 
-        
+        private Boolean checkNumber(string no, ref int val)
+        {
+            Boolean isNumber = false;
+            if (int.TryParse(no.Trim(), out val))
+                isNumber = true;
+            return isNumber;
+        }
+
+
     }
 }
