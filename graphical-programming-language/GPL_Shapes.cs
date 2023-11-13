@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace graphical_programming_language
 {
-    internal class GPL_Shapes : GPL_Shapes_Draw
+    public class GPL_Shapes : GPL_Shapes_Draw
     {
+
+        private readonly CommonFunction commonFunction;
+
+        public GPL_Shapes()
+        {
+            commonFunction = new CommonFunction();
+        }
 
         //get input from user when run button clicked!.
         public void runCommand(string inputCommand)
@@ -38,8 +45,8 @@ namespace graphical_programming_language
                         if (firstArrCommand[j].ToString().Trim().Equals("moveto"))
                         {
                             //check if the three value enter where, firstvalue = "moveto" 2nd and 3rd value are numbers
-                            if (firstArrCommand.Count() != 3)
-                            {
+                            if (!commonFunction.CheckArrayLength(firstArrCommand))
+                                {
                                 //error message for invalid and break the loop.
                                 errorMessage = errorMessage + "Command no. " + (i + 1).ToString() + " is invalid!\n";
                                 runFlag = false;
@@ -48,10 +55,10 @@ namespace graphical_programming_language
                             else
                             {
                                 //check condition for x parameter is number or not
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     //check condition for y parameter is number or not
-                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    if (commonFunction.checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
                                     {
                                         //if both x and y is number than pass to moveto function
                                         if (runFlag)
@@ -94,10 +101,10 @@ namespace graphical_programming_language
                             else
                             {
                                 //check condition for x parameter is number or not
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     //check condition for y parameter is number or not
-                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    if (commonFunction.checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
                                     {
                                         //if both x and y is number than pass to DrawRect function
                                         if (runFlag)
@@ -140,7 +147,7 @@ namespace graphical_programming_language
                             else
                             {
                                 //check the parameter value is number or not.
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     //if it pass the condition than parameter value pass to square function
                                     if (runFlag)
@@ -171,13 +178,13 @@ namespace graphical_programming_language
                             }
                             else
                             {   //condition to check first parameter is number or not.
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     //condtion to check second parameter is number or not
-                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    if (commonFunction.checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
                                     {
                                         //condition to check thrid number is parameter or not
-                                        if (checkNumber(firstArrCommand[j + 3].Trim(), ref cmdz))
+                                        if (commonFunction.checkNumber(firstArrCommand[j + 3].Trim(), ref cmdz))
                                         {
                                             if (runFlag)
                                             {
@@ -223,10 +230,10 @@ namespace graphical_programming_language
                             else
                             {
                                 //condition to check first parameter is number or not.
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     //condition to check second parameter is number or not.
-                                    if (checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
+                                    if (commonFunction.checkNumber(firstArrCommand[j + 2].Trim(), ref cmdY))
                                     {
                                         if (runFlag)
                                         {
@@ -263,7 +270,7 @@ namespace graphical_programming_language
                             }
                             else
                             {
-                                if (checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
+                                if (commonFunction.checkNumber(firstArrCommand[j + 1].Trim(), ref cmdX))
                                 {
                                     if (runFlag)
                                     {
@@ -303,15 +310,6 @@ namespace graphical_programming_language
         }
 
 
-        //check pass parameter is number of not?
-        private Boolean checkNumber(string no, ref int val)
-        {
-            //inital boolean for isNumber is false
-            Boolean isNumber = false;
-            if (int.TryParse(no.Trim(), out val))
-                isNumber = true;
-            return isNumber;
-        }
 
     }
 }

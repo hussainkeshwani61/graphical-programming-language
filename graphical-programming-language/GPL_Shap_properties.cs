@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace graphical_programming_language
 {
-    internal class GPL_Shap_properties
+    public class GPL_Shap_properties
     {
         private static int _x, _y;
         static private Bitmap _NewPicture = new Bitmap(640, 480);

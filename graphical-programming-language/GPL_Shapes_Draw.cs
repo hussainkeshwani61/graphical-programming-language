@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace graphical_programming_language
 {
-    internal class GPL_Shapes_Draw
+    public class GPL_Shapes_Draw
     {
         //declare variables 
         Graphics g;

@@ -4,6 +4,21 @@
     "C:\\Users\\PC\\Desktop\\graphical-programming-language\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
+    "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj",
+        "projectName": "graphical-programming-language",
+        "projectPath": "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
     "C:\\Users\\PC\\Desktop\\graphical-programming-language\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +46,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

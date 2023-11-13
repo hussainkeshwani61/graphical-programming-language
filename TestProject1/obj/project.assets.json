@@ -598,6 +598,15 @@
             "related": ".xml"
           }
         }
+      },
+      "graphical-programming-language/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/graphical-programming-language.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/graphical-programming-language.dll": {}
+        }
       }
     }
   },
@@ -2292,6 +2301,11 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "graphical-programming-language/1.0.0": {
+      "type": "project",
+      "path": "../graphical-programming-language/graphical-programming-language.csproj",
+      "msbuildProject": "../graphical-programming-language/graphical-programming-language.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2299,7 +2313,8 @@
       "MSTest.TestAdapter >= 2.2.10",
       "MSTest.TestFramework >= 2.2.10",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
-      "coverlet.collector >= 3.2.0"
+      "coverlet.collector >= 3.2.0",
+      "graphical-programming-language >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2333,7 +2348,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj": {
+              "projectPath": "C:\\Users\\PC\\Desktop\\graphical-programming-language\\graphical-programming-language\\graphical-programming-language.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
