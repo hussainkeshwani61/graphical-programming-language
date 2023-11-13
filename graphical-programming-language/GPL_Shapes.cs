@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace graphical_programming_language
 {
+    /// <summary>
+    /// GPL shpaes main class
+    /// </summary>
     public class GPL_Shapes : GPL_Shapes_Draw
     {
-
+        /// <summary>
+        /// commonFunction 
+        /// </summary>
         private readonly CommonFunction commonFunction;
 
+        /// <summary>
+        /// construct function of GPL_shape
+        /// </summary>
         public GPL_Shapes()
         {
             commonFunction = new CommonFunction();
         }
 
-        //get input from user when run button clicked!.
+        /// <summary>
+        /// Executes the provided graphical programming language (GPL) commands.
+        /// </summary>
+        /// <param name="inputCommand">The GPL command string to execute.</param>
         public void runCommand(string inputCommand)
         {
             //seting up all axis at zero and strings at empty at initial face..

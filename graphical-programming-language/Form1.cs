@@ -1,25 +1,33 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace graphical_programming_language
 {
     public partial class Form1 : Form
     {
-        //giving GPL_shapes class as g.
+        /// <summary>
+        /// giving GPL_shapes class as g
+        /// </summary>
         GPL_Shapes g;
 
-        //form construct function
+        /// <summary>
+        /// form construct function
+        /// </summary>
+      
         public Form1()
         {
             InitializeComponent();
             GPL_Shap_properties.x = GPL_Shap_properties.y = 0;
-            g = new GPL_Shapes();//create object of GPL_shapes class
+            g = new GPL_Shapes();
             g.CurrPoint(false);
             Refresh();
         }
 
-        //this function use refresh the outputBox.Image refresh..
+        /// <summary>
+        /// this function use refresh the outputBox.Image refresh.
+        /// </summary>
         public override void Refresh()
         {
             outputBox.Image = GPL_Shap_properties.NewPicture;
@@ -50,9 +58,11 @@ namespace graphical_programming_language
 
         }
 
-        /*
-         * this is to exicute the command and display the shape on outputbox.
-         */
+        /// <summary>
+        /// this is to exicute the command and display the shape on outputbox.
+        /// </summary>
+        /// <param name="sender">Object which raised to the event.</param>
+        /// <param name="e">The event arguments.</param>
         private void btnRun_Click(object sender, EventArgs e)
         {
             Boolean inputFlag = false;
@@ -84,15 +94,20 @@ namespace graphical_programming_language
                 g.PrintMessage("Please enter any command!");
                 oneLineInput.Focus();
             }
+            
+            //refresh the form
             Refresh();
             GPL_Shap_properties.isFill = false;
 
         }
 
-        /*
-         * this function is to save the multi command code into text file in your local system.
-         * we can use the same code next time using open button.
-         */
+        /// <summary>
+        /// this function is to save the multi command code into text file in your local system. we can use the same code next time using open button
+        /// </summary>
+        /// <param name="sender">The sender os event of save button</param>
+        /// <param name="e">e is the information contain about the event save button</param>
+        
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();
@@ -119,7 +134,12 @@ namespace graphical_programming_language
         {
 
         }
-        //this function is to open saved command in multiLine Command input by the user
+
+        /// <summary>
+        /// this function is to open saved command in multiLine Command input by the user
+        /// </summary>
+        /// <param name="sender">The sender os event of Open button</param>
+        /// <param name="e">e is the information contain about the event epen button</param>
         private void btnOpen_Click(object sender, EventArgs e)
         {
             OpenFileDialog opentext = new OpenFileDialog();
@@ -132,7 +152,12 @@ namespace graphical_programming_language
             }
         }
 
-        //button to clear screen without resetting the picture box
+        /// <summary>
+        ///utton to clear screen without resetting the picture box 
+        /// </summary> /// 
+        /// <param name="sender">The sender os event of Open reset the screen</param>
+        /// <param name="e">e is the information contain about the event epen button</param>
+        //
         private void btnClear_Click(object sender, EventArgs e)
         {
             GPL_Shap_properties.NewPicture = new Bitmap(640, 480);

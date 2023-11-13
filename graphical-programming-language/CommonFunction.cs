@@ -8,6 +8,12 @@ namespace graphical_programming_language
 {
     public class CommonFunction
     {
+        /// <summary>
+        /// this function is to check enter value is number or not
+        /// </summary>
+        /// <param name="no">this is string </param>
+        /// <param name="val">this is its value</param>
+        /// <returns></returns>
         public Boolean checkNumber(string no, ref int val)
         {
             //inital boolean for isNumber is false
