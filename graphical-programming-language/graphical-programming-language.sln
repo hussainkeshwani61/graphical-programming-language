@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphical-programming-language", "graphical-programming-language.csproj", "{4B9DD01A-AC7D-4C14-9595-24F964974F89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{BF4245DB-ACE8-4B2B-8222-F04B08CBD66C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "..\TestProject1\TestProject1.csproj", "{BF4245DB-ACE8-4B2B-8222-F04B08CBD66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASE_Assingment2", "..\ASE_Assingment2\ASE_Assingment2.csproj", "{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BF4245DB-ACE8-4B2B-8222-F04B08CBD66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF4245DB-ACE8-4B2B-8222-F04B08CBD66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF4245DB-ACE8-4B2B-8222-F04B08CBD66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
