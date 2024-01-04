@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawRectangle.cs" />
     <Compile Include="DrawCircle.cs" />
     <Compile Include="shape.cs" />
     <Compile Include="shapeinterface.cs" />
