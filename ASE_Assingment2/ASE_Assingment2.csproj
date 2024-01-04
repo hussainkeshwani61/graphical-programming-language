@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawCircle.cs" />
     <Compile Include="shape.cs" />
     <Compile Include="shapeinterface.cs" />
     <Compile Include="shapefactory.cs" />

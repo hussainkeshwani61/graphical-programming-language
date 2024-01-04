@@ -1,10 +1,11 @@
-﻿using System;
+﻿using ASE_Assingment2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ASE_Assingment2
+class ShapeFactory
 {
     public Shape getShape(String shapeType)
     {
