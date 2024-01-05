@@ -1,0 +1,10 @@
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\bin\Debug\ASE_Assingment2.exe.config
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\bin\Debug\ASE_Assingment2.exe
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\bin\Debug\ASE_Assingment2.pdb
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.Form1.resources
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.Properties.Resources.resources
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.exe
+C:\Users\PC\Desktop\graphical-programming-language\ASE_Assingment2\obj\Debug\ASE_Assingment2.pdb
