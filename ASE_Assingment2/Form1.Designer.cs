@@ -32,7 +32,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.ControlPanel = new System.Windows.Forms.RichTextBox();
+            this.ControlePanel = new System.Windows.Forms.RichTextBox();
             this.commandline = new System.Windows.Forms.TextBox();
             this.display = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -66,13 +66,13 @@
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // ControlPanel
+            // ControlePanel
             // 
-            this.ControlPanel.Location = new System.Drawing.Point(12, 12);
-            this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(255, 240);
-            this.ControlPanel.TabIndex = 3;
-            this.ControlPanel.Text = "";
+            this.ControlePanel.Location = new System.Drawing.Point(12, 12);
+            this.ControlePanel.Name = "ControlePanel";
+            this.ControlePanel.Size = new System.Drawing.Size(255, 240);
+            this.ControlePanel.TabIndex = 3;
+            this.ControlePanel.Text = "";
             // 
             // commandline
             // 
@@ -102,7 +102,7 @@
             this.ClientSize = new System.Drawing.Size(754, 476);
             this.Controls.Add(this.display);
             this.Controls.Add(this.commandline);
-            this.Controls.Add(this.ControlPanel);
+            this.Controls.Add(this.ControlePanel);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RichTextBox ControlPanel;
+        private System.Windows.Forms.RichTextBox ControlePanel;
         private System.Windows.Forms.TextBox commandline;
         private System.Windows.Forms.PictureBox display;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
