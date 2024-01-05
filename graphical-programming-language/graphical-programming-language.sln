@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "..\TestProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASE_Assingment2", "..\ASE_Assingment2\ASE_Assingment2.csproj", "{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASE_Assingment_unittest", "..\ASE_Assingment_unittest\ASE_Assingment_unittest.csproj", "{472F16DB-1F8F-4978-9CB7-2B0CCDA597BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE30A30B-3B46-4B6B-9589-26EBA4BCBF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472F16DB-1F8F-4978-9CB7-2B0CCDA597BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472F16DB-1F8F-4978-9CB7-2B0CCDA597BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472F16DB-1F8F-4978-9CB7-2B0CCDA597BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472F16DB-1F8F-4978-9CB7-2B0CCDA597BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
