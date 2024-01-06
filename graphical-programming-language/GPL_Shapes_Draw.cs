@@ -197,7 +197,7 @@ namespace graphical_programming_language
             }
         }
 
-        /// <summary>
+        ///<summary>
         /// Prints the specified message on the graphics surface.
         /// </summary>
         /// <param name="message">The message to print.</param>

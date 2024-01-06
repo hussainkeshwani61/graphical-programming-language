@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ASE_Assingment_unittest",
+    "\\TestProject1"
   ],
-  "SelectedNode": "\\graphical-programming-language.sln",
+  "SelectedNode": "\\ASE_Assingment_unittest\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }

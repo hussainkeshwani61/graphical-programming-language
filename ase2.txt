@@ -1,0 +1,69 @@
+Program command (45 marks)
+Loop command work
+-unit test and xml comments for simple loop : **which loop?? **
+-commits
+
+Variable 
+size = 10
+circle size
+Show in your code how you have implemented this
+-unit test and xml comments for define variable
+-commit 
+
+Expressions, (**explain this**)
+-such as size = count * 10 can be used. 
+Show this by writing a program in your language to draw concentric circles. - show in your code how you do this
+-unit test and xml comments 
+-commits
+
+Your loop works with variable. i.e. can loop for a number defined by a variable. Demonstrate this. - show in your code how you do this.
+-unit test and xml comments 
+-commits
+
+If statement 
+-for one line
+-for multiline 
+-for both the program windows
+-unit test and xml comments 
+-commits
+
+Syntax check  
+Xml comments unit test and comments
+
+Methods 
+- Can be define and called must be multiline command
+    - Method with multiple parameter
+    - Unit test for method and xml comments
+    - Commits
+
+Provide two independent  program which have separate program 
+
+Both program output in same window
+-----------------------------------
+ASE part 2
+
+1. Programming Commands (45 marks)
+
+1.1 variables  (10 marks)
+-allow variable to be used in loop 
+-eg: size =  size + 10;
+
+1.2 if statement (5 marks)
+-if count > size 
+ end if
+
+1.3 Loop Command (5 marks)
+- Loop start and end with end loop
+
+1.4 Syntax checking (5 marks)
+-check syntax before the program run
+
+1.5 Methods (10 marks)
+-define the method and use that method
+
+1.6 multiple program window (10 marks)
+-user can run program from two different program window and get output in single window canvas
+
+2 Design and implementation standards 
+-facotry class (2 marks)
+-use additional design pattern (3 marks)
