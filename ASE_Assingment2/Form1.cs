@@ -155,19 +155,21 @@ namespace ASE_Assingment2
         public void excecuteCommand(ArrayList Currentline, string[] lines, int linecount)
         {
 
-
+            // Initialize counters and variables
             int counter = 0;
             int jump = 0;
 
-
+            // Loop through each line which will exicuted
             while (lines.Length >= counter)
             {
+                // Create graphics objects for drawing for first time
                 Graphics g = Graphics.FromImage(display.Image);
                 Pen pen = new Pen(pencolor, 2);
                 Brush brush = new SolidBrush(brushcolor);
 
                 try
                 {
+                    // Check for jump condition if which jump it is!
                     if (jump != 0)
                     {
                         if (jump == counter)
@@ -177,11 +179,13 @@ namespace ASE_Assingment2
                         }
                     }
 
+                    // Split the current line into an array of strings from entered commands
                     splitw = (String[])Currentline[counter];
 
-
+                    //select for command is of which type
                     switch (splitw[0].ToLower())
                     {
+                        //circle command
                         case "circle":
 
                             int radius;
@@ -201,6 +205,7 @@ namespace ASE_Assingment2
                                 MessageBox.Show("enter a radius or use a variable", "error");
                             }
                             break;
+                        //rectangle command
                         case "rect":
 
                             int width;
@@ -220,7 +225,7 @@ namespace ASE_Assingment2
                                 new DrawRectangle(x, y, width, height).Draw(g, pen, brush);
                             }
                             break;
-                        case "square":
+                        case "square": //square commands
                             int side;
                             if (!int.TryParse(splitw[1], out side))
                             {
@@ -234,7 +239,7 @@ namespace ASE_Assingment2
                             }
 
                             break;
-                        case "drawto":
+                        case "drawto": //drawto command
                             int point1, point2;
                             if (!int.TryParse(splitw[1], out point1) || !int.TryParse(splitw[2], out point2))
                             {
@@ -251,7 +256,7 @@ namespace ASE_Assingment2
 
                             }
                             break;
-                        case "pen":
+                        case "pen":// pen commands
                             try
                             {
                                 if (splitw[1] != "rand")
@@ -268,7 +273,7 @@ namespace ASE_Assingment2
                                 pencolor = Color.Black;
                             }
                             break;
-                        case "brush":
+                        case "brush": //brush command
                             try
                             {
                                 if (splitw[1] != "rand")
@@ -287,7 +292,7 @@ namespace ASE_Assingment2
                                 brushcolor = Color.Black;
                             }
                             break;
-                        case "triangle":
+                        case "triangle": //tringle command
                             int p1, p2, p3;
 
                             if (!int.TryParse(splitw[1], out p1) || !int.TryParse(splitw[2], out p2) || !int.TryParse(splitw[3], out p3))
@@ -315,12 +320,12 @@ namespace ASE_Assingment2
                                 new DrawTriangle(pnt1).Draw(g, pen, brush);
                             }
                             break;
-                        case "clear":
+                        case "clear": //clear screen command
                             g.Clear(Color.Transparent);
                             g.Dispose();
                             break;
 
-                        case "moveto":
+                        case "moveto": //moveto command
 
                             if (int.TryParse(splitw[1], out x) && int.TryParse(splitw[2], out y))
                             {
@@ -335,11 +340,11 @@ namespace ASE_Assingment2
 
                             break;
 
-                        case "var":
+                        case "var": //variable commadn
                             VarCheck(splitw[1], splitw[2]);
                             break;
 
-                        case "loop":
+                        case "loop": //command for loop
                             lbit = true;
                             loopmax = 0;
                             loopcount = 0;
