@@ -13,7 +13,7 @@ namespace ASE_Assingment2
     public class DrawTriangle : Shape
     {
         // Array to store the vertices of the triangle
-        private Point[] pnt
+        private Point[] pnt;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DrawTriangle"/> class with specified vertices.
