@@ -61,30 +61,41 @@ namespace ASE_Assingment2
         {
             MemoryStream userInput = new MemoryStream(Encoding.UTF8.GetBytes(ControlePanel.Text));
 
+            // Create a SaveFileDialog to prompt the user for a file location
             SaveFileDialog save = new SaveFileDialog();
+            // Default file extension
             save.DefaultExt = "txt";
             save.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             DialogResult result = save.ShowDialog();
+            // Show the SaveFileDialog and capture the result
             Stream fileStream;
 
+            // Check if the user clicked OK in the SaveFileDialog
             if (result == DialogResult.OK)
             {
 
+                // Open the selected file for writing
                 fileStream = save.OpenFile();
                 userInput.Position = 0;
                 userInput.WriteTo(fileStream);
+                // Close the fileStream
                 fileStream.Close();
+                // Close the MemoryStream
                 userInput.Close();
 
             }
+            // file save at desired positiioin
             save.Dispose();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             String input = ControlePanel.Text;
+            // Check if the input is empty
             if (input.Trim() == "")
             {
+                // Show an error message if the input is empty
+
                 MessageBox.Show("Enter a command", "ERROR");
 
             }
@@ -95,6 +106,8 @@ namespace ASE_Assingment2
                 ArrayList Currentline = new ArrayList();
                 int i = 0;
                 lines = ControlePanel.Lines.ToArray();
+
+                // Split each line into an array of strings and add it to the ArrayList
                 while (lines.Length != i)
                 {
 
@@ -102,6 +115,7 @@ namespace ASE_Assingment2
                     Currentline.Add(line);
                     i++;
                 }
+               //get total number of line to process the program
                 int length = lines.Length;
 
                 Check(Currentline, lines, length);
@@ -110,15 +124,15 @@ namespace ASE_Assingment2
                 Array.Clear(strSplit, 0, strSplit.Length);
                 string errors = string.Join(", ", strError.Where(x => x != 0));
 
-
+                // Check if any errors occurred during validation
                 if (condn == false)
                 {
-
+                    //error message showing
                     MessageBox.Show("Error Occur in Line no. :" + errors + ".", "error");
                 }
                 else
                 {
-
+                    //if no erro then exicuted this command
                     excecuteCommand(Currentline, lines, length);
                 }
 
@@ -137,14 +151,7 @@ namespace ASE_Assingment2
         }
 
 
-
-
-
-
-
-
-
-
+        //exicuted command get from the User
         public void excecuteCommand(ArrayList Currentline, string[] lines, int linecount)
         {
 
